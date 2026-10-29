@@ -319,3 +319,7 @@ figure.fig figcaption{font-size:.92rem;color:var(--dark-2);border-top:1px solid 
 /* anchor targets stop beneath the sticky header */
 [id]{scroll-margin-top:64px}
 @media (prefers-reduced-motion:reduce){.head{transition:none}}
+.small-link{font-size:.95rem}
+.small-link a{color:var(--steel);text-decoration-color:var(--orange)}
+.small-link a:hover{color:#fff}
+.affil a{display:block}

@@ -1,0 +1,27 @@
+
+/* concrete repair page */
+.cr-hero{min-height:0;background:transparent}
+.cr-hero::after{display:none}
+.crumb{font-size:.95rem;color:var(--steel);margin-bottom:18px}
+.crumb a{color:var(--steel);text-decoration:none}
+.crumb a:hover{text-decoration:underline}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(18px,2.5vw,32px);border-top:2px solid var(--rule);padding-top:26px}
+.steps h3{font-size:1.3rem;margin-bottom:10px}
+.steps p{font-size:.98rem;color:var(--steel)}
+@media (max-width:1000px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+ul.plain{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+ul.plain li{padding:11px 0 11px 22px;border-bottom:1px solid var(--rule);position:relative}
+ul.plain li::before{content:"";position:absolute;left:0;top:calc(11px + .72em);width:10px;height:2px;background:var(--orange)}
+.grid-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0 32px;border-top:2px solid var(--rule)}
+.grid-list li{padding:14px 0;border-bottom:1px solid var(--rule);font-weight:500}
+@media (max-width:900px){.grid-list{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.grid-list{grid-template-columns:1fr}}
+.where{margin-top:28px;color:var(--steel);max-width:70ch}
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;padding:14px 32px 14px 0;font:600 1.05rem/1.4 var(--body);list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:10px;font-size:1.5rem;color:var(--orange)}
+.faq details[open] summary::after{content:"\2013"}
+.faq p{padding:0 0 16px;color:var(--steel);font-size:1rem}
