@@ -7,6 +7,15 @@
     var t=document.getElementById(id); if(t) t.scrollIntoView();
   }
 
+  // Header: slim sticky rail on desktop; on phones it hides on scroll down and returns on scroll up
+  var head=document.querySelector(".head"), lastY=window.scrollY, narrow=window.matchMedia("(max-width:900px)");
+  window.addEventListener("scroll",function(){
+    var y=window.scrollY;
+    if(narrow.matches){ head.classList.toggle("hidden", y>lastY && y>120); }
+    else { head.classList.remove("hidden"); }
+    lastY=y;
+  },{passive:true});
+
   // Services explorer: tabs with arrow-key support
   var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
   function show(tab,focus){
